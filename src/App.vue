@@ -1,14 +1,16 @@
 <template>
-	<div>
-		<app-quote quote='A wonderful quote'></app-quote>
-	</div>
+ 
 </template>
 
 <script>
-import Quote from './components/Quote.vue'
 export default {
-	components: {
-		'app-quote': Quote,
+	data: function() {
+		return {
+			quotes: [
+				'Just a quote to see something',
+			],
+			maxQuotes: 10,
+		}	
 	}
-}
+};
 </script>
