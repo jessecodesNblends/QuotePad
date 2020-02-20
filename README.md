@@ -1,6 +1,6 @@
 # QuotePad
 
-> A Vue Js application to display quotes
+> A Vue Js application for writing and display quotes
 
 ## Build Setup
 
