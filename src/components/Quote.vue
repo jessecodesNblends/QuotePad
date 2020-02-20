@@ -10,9 +10,9 @@
 
 <style>
     .panel-body {
-        font-family: 'Arizona', cursive;
-        font-size: 24px;
-        color: #6e6e6e;
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+        text-shadow: 4px 4px 4px #aaa;
     }
     .quote {
         cursor: pointer;
