@@ -1,4 +1,4 @@
-# quotes
+# QuotePad
 
 > A Vue Js application to display quotes
 
