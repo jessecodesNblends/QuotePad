@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<app-header></app-header>
+		<app-header v-bind:quoteCount='quotes.length' v-bind:maxQuotes='maxQuotes'></app-header>
 		<app-new-quote v-on:quoteAdded='newQuote'></app-new-quote>
 		<appQuoteGrid v-bind:quotes='quotes' v-on:quoteDeleted='deleteQuote'></appQuoteGrid>
 		<div class="row">
@@ -32,6 +32,9 @@ export default {
 	},
 	methods: {
 		newQuote(quote) {
+			if(this.quotes.length >= this.maxQuotes) {
+				return alert('You must delete some quotes first!')
+			}
 			this.quotes.push(quote);
 		},
 		deleteQuote(index) {
