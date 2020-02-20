@@ -8,24 +8,25 @@
             <div class="col-sm-8 col-sm-offset-2 col-xs-12 col-md-6 col-md-offset-3 form-group">
                 <button class="btn btn-primary" v-on:click.prevent='createNew'>Add Quote</button>
             </div>
-        <form/>
+        </form>
     </div>
 </template>
 
 <script>
-import Quote from './Quote'
+import Quote from './Quote.vue'
 
 export default {
-   data: function() {
-       return {
-           quote: ''
-       }
-   },
-   methods: {
-       createNew() {
-           
-       }
-   }
+    data: function() {
+        return {
+            quote: ''
+        }
+    },
+    methods: {
+        createNew() {
+            this.$emit('quoteAdded', this.quote);
+            this.quote = '';
+        }
+    }
 }
 </script>
 
