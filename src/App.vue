@@ -1,12 +1,19 @@
 <template>
 	<div class="container">
-		<appQuoteGrid></appQuoteGrid>
+		<app-new-quote></app-new-quote>
+		<appQuoteGrid v-bind:quotes='quotes'></appQuoteGrid>
 	</div>
 </template>
 
 <script>
-import QuoteGrid from './components/QuoteGrid'
+import QuoteGrid from './components/QuoteGrid.vue'
+import NewQuote from './components/NewQuote.vue'
+
 export default {
+	components: {
+		appQuoteGrid: QuoteGrid,
+		appNewQuote: NewQuote
+	},
 	data: function() {
 		return {
 			quotes: [
@@ -15,8 +22,5 @@ export default {
 			maxQuotes: 10,
 		}	
 	},
-	components: {
-		appQuoteGrid: QuoteGrid,
-	}
 };
 </script>
